@@ -13,10 +13,16 @@
         android:theme="@style/Theme.SuperAlarmClock"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity2"
+            android:name=".ScheduleActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".AlarmActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SetInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TopActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
