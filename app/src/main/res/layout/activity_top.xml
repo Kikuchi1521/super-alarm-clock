@@ -22,11 +22,11 @@
 
     <TextView
         android:id="@+id/text_header1"
-        android:layout_width="126dp"
+        android:layout_width="170dp"
         android:layout_height="50dp"
-        android:text="アラーム"
+        android:text="9月6日 のアラーム"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:layout_marginTop="15dp"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintEnd_toStartOf="@id/textClock"

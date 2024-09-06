@@ -1,5 +1,6 @@
 package jp.ac.meijou.android.superalarmclock;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 
@@ -15,14 +16,16 @@ public class SetInfoActivity extends AppCompatActivity {
 
     private ActivitySetInfoBinding binding;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivitySetInfoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
+        binding.buttonSave.setOnClickListener(view -> {
+            var intent = new Intent(this, TopActivity.class);
+            startActivity(intent);
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
