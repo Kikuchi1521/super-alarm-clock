@@ -22,6 +22,12 @@ public class SetInfoActivity extends AppCompatActivity {
         binding = ActivitySetInfoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // Cancelボタンが押されたとき
+        binding.buttonCancel.setOnClickListener(view -> {
+            finish();
+        });
+
+        // Saveボタンが押されたとき
         binding.buttonSave.setOnClickListener(view -> {
             var intent = new Intent(this, TopActivity.class);
             startActivity(intent);
