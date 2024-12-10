@@ -9,4 +9,15 @@
         <item>5限</item>
         <item>6限</item>
     </string-array>
+    <string-array name="commuting_time_item">
+        <item>未設定</item>
+        <item>5分</item>
+        <item>10分</item>
+        <item>15分</item>
+        <item>20分</item>
+        <item>25分</item>
+        <item>30分</item>
+        <item>35分</item>
+
+    </string-array>
 </resources>

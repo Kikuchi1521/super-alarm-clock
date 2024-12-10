@@ -38,6 +38,7 @@ public class SetInfoActivity extends AppCompatActivity {
             var thu = binding.spinnerThu.getSelectedItem().toString();
             var fri = binding.spinnerFri.getSelectedItem().toString();
             var sat = binding.spinnerSat.getSelectedItem().toString();
+
             prefDataStore.setString("mon", mon);
             prefDataStore.setString("tue", tue);
             prefDataStore.setString("wed", wed);
