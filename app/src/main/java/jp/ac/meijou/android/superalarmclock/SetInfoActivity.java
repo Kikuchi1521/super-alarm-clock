@@ -15,12 +15,15 @@ import jp.ac.meijou.android.superalarmclock.databinding.ActivitySetInfoBinding;
 public class SetInfoActivity extends AppCompatActivity {
 
     private ActivitySetInfoBinding binding;
+    private PrefDataStore prefDataStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivitySetInfoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        prefDataStore = PrefDataStore.getInstance(this
+        );
 
         // Cancelボタンが押されたとき
         binding.buttonCancel.setOnClickListener(view -> {
@@ -29,6 +32,19 @@ public class SetInfoActivity extends AppCompatActivity {
 
         // Saveボタンが押されたとき
         binding.buttonSave.setOnClickListener(view -> {
+            var mon = binding.spinnerMon.getSelectedItem().toString();
+            var tue = binding.spinnerTue.getSelectedItem().toString();
+            var wed = binding.spinnerWed.getSelectedItem().toString();
+            var thu = binding.spinnerThu.getSelectedItem().toString();
+            var fri = binding.spinnerFri.getSelectedItem().toString();
+            var sat = binding.spinnerSat.getSelectedItem().toString();
+            prefDataStore.setString("mon", mon);
+            prefDataStore.setString("tue", tue);
+            prefDataStore.setString("wed", wed);
+            prefDataStore.setString("thu", thu);
+            prefDataStore.setString("fri", fri);
+            prefDataStore.setString("sat", sat);
+
             var intent = new Intent(this, TopActivity.class);
             startActivity(intent);
         });
