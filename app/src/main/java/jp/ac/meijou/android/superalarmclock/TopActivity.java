@@ -123,12 +123,12 @@ public class TopActivity extends AppCompatActivity {
 
                         int commute = Integer.parseInt(str_commute);
                         t = switch (when_start.get()) {
-                            case "1限" -> LocalTime.of(9, 0).plusMinutes(commute);
-                            case "2限" -> LocalTime.of(10, 40).plusMinutes(commute);
-                            case "3限" -> LocalTime.of(13, 0).plusMinutes(commute);
-                            case "4限" -> LocalTime.of(14, 40).plusMinutes(commute);
-                            case "5限" -> LocalTime.of(16, 20).plusMinutes(commute);
-                            case "6限" -> LocalTime.of(18, 0).plusMinutes(commute);
+                            case "1限" -> LocalTime.of(9, 0).minusMinutes(commute);
+                            case "2限" -> LocalTime.of(10, 40).minusMinutes(commute);
+                            case "3限" -> LocalTime.of(13, 0).minusMinutes(commute);
+                            case "4限" -> LocalTime.of(14, 40).minusMinutes(commute);
+                            case "5限" -> LocalTime.of(16, 20).minusMinutes(commute);
+                            case "6限" -> LocalTime.of(18, 0).minusMinutes(commute);
                             default -> LocalTime.of(0, 0);
                         };// switch
 
@@ -182,12 +182,12 @@ public class TopActivity extends AppCompatActivity {
 
                         int commute = Integer.parseInt(str_commute);
                         t = switch (when_start.get()) {
-                            case "1限" -> LocalTime.of(9, 0).plusMinutes(commute);
-                            case "2限" -> LocalTime.of(10, 40).plusMinutes(commute);
-                            case "3限" -> LocalTime.of(13, 0).plusMinutes(commute);
-                            case "4限" -> LocalTime.of(14, 40).plusMinutes(commute);
-                            case "5限" -> LocalTime.of(16, 20).plusMinutes(commute);
-                            case "6限" -> LocalTime.of(18, 0).plusMinutes(commute);
+                            case "1限" -> LocalTime.of(9, 0).minusMinutes(commute);
+                            case "2限" -> LocalTime.of(10, 40).minusMinutes(commute);
+                            case "3限" -> LocalTime.of(13, 0).minusMinutes(commute);
+                            case "4限" -> LocalTime.of(14, 40).minusMinutes(commute);
+                            case "5限" -> LocalTime.of(16, 20).minusMinutes(commute);
+                            case "6限" -> LocalTime.of(18, 0).minusMinutes(commute);
                             default -> LocalTime.of(0, 0);
                         };// switch
 
