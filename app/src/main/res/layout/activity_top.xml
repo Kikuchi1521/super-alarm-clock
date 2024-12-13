@@ -24,9 +24,10 @@
         android:id="@+id/text_header1"
         android:layout_width="170dp"
         android:layout_height="50dp"
-        android:text="9月6日 のアラーム"
+        android:text="明日のアラーム"
         android:textAlignment="center"
         android:textSize="20sp"
+
         android:layout_marginTop="15dp"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintEnd_toStartOf="@id/textClock"
@@ -45,16 +46,25 @@
         app:layout_constraintTop_toTopOf="@+id/text_header1" />
 
     <TextView
-        android:id="@+id/hour"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:ems="11" />
+        android:id="@+id/textSelectedDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/calendarView" />
 
     <TextView
-        android:id="@+id/minute"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:ems="11" />
+        android:id="@+id/textAlarmTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@+id/textSelectedDay"
+        app:layout_constraintTop_toTopOf="@+id/textSelectedDay" />
 
     <Button
         android:id="@+id/button_set_info"
