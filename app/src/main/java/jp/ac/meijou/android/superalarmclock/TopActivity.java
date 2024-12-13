@@ -4,10 +4,15 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.util.Calendar;
+import java.util.Optional;
 
 import jp.ac.meijou.android.superalarmclock.databinding.ActivityTopBinding;
 
@@ -20,6 +25,8 @@ public class TopActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityTopBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        timeConf("00", "00");
 
         binding.buttonSetInfo.setOnClickListener(view -> {
             var intent = new Intent(this, SetInfoActivity.class);
@@ -36,5 +43,9 @@ public class TopActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    private void timeConf(String h, String m) {
+        binding.textClock.setText(h + ":" + m);
     }
 }
